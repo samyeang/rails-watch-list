@@ -1,0 +1,13 @@
+<nav class="navbar navbar-light bg-light">
+<a href="https://www.flaticon.com/free-icons/popcorn" title="popcorn icons"></a>
+  <form class="form-inline">
+    <%= link_to "New List", new_list_path %>
+    <div style="padding-left: 10px;">
+      <%= link_to "My Lists", lists_path %>
+    </div>
+  </form>
+</nav>
+
+<% @lists.each do |l| %>
+  <li><%= link_to l.name, list_path(l.id) %></li>
+<% end %>
